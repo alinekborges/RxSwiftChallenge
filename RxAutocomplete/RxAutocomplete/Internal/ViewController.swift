@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var queryTextField: UITextField!
     
-    let provider: CountryProvider = LocalCountryProvider()
+    let provider: CountryService = FakeCountryService()
     
     let disposeBag = DisposeBag()
 
@@ -27,8 +27,6 @@ class ViewController: UIViewController {
     
     func setupViews() {
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        
-        //TODO: Tap to close keyboard
     }
 
     func setupBindings() {

@@ -12,9 +12,9 @@
 		6B5AB0F62196E0E500581E78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B5AB0F42196E0E500581E78 /* Main.storyboard */; };
 		6B5AB0F82196E0E700581E78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B5AB0F72196E0E700581E78 /* Assets.xcassets */; };
 		6B5AB0FB2196E0E700581E78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B5AB0F92196E0E700581E78 /* LaunchScreen.storyboard */; };
-		6B5AB1032196E2F300581E78 /* CityProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5AB1022196E2F300581E78 /* CityProvider.swift */; };
-		6B5AB1052196E3EB00581E78 /* CityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5AB1042196E3EB00581E78 /* CityService.swift */; };
 		6B5AB1072196E93700581E78 /* CountryAutocomplete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5AB1062196E93700581E78 /* CountryAutocomplete.swift */; };
+		6BBC829F2198589B00F2E3F7 /* CountrySearcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBC829D2198589B00F2E3F7 /* CountrySearcher.swift */; };
+		6BBC82A02198589B00F2E3F7 /* CountryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBC829E2198589B00F2E3F7 /* CountryService.swift */; };
 		F31DEDC9E956DA12ED4C19E4 /* Pods_RxAutocomplete.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D61FAD5FE334DFD35B39E998 /* Pods_RxAutocomplete.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,9 +26,9 @@
 		6B5AB0F72196E0E700581E78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6B5AB0FA2196E0E700581E78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6B5AB0FC2196E0E700581E78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6B5AB1022196E2F300581E78 /* CityProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityProvider.swift; sourceTree = "<group>"; };
-		6B5AB1042196E3EB00581E78 /* CityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityService.swift; sourceTree = "<group>"; };
 		6B5AB1062196E93700581E78 /* CountryAutocomplete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryAutocomplete.swift; sourceTree = "<group>"; };
+		6BBC829D2198589B00F2E3F7 /* CountrySearcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountrySearcher.swift; sourceTree = "<group>"; };
+		6BBC829E2198589B00F2E3F7 /* CountryService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryService.swift; sourceTree = "<group>"; };
 		9E50CD434B5AFAA449DC905D /* Pods-RxAutocomplete.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxAutocomplete.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-RxAutocomplete/Pods-RxAutocomplete.debug.xcconfig"; sourceTree = "<group>"; };
 		D61FAD5FE334DFD35B39E998 /* Pods_RxAutocomplete.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxAutocomplete.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E369A27F4B3790CA011502E9 /* Pods-RxAutocomplete.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxAutocomplete.release.xcconfig"; path = "../Pods/Target Support Files/Pods-RxAutocomplete/Pods-RxAutocomplete.release.xcconfig"; sourceTree = "<group>"; };
@@ -85,13 +85,13 @@
 		6B5AB1082196E93F00581E78 /* Internal */ = {
 			isa = PBXGroup;
 			children = (
+				6BBC829D2198589B00F2E3F7 /* CountrySearcher.swift */,
+				6BBC829E2198589B00F2E3F7 /* CountryService.swift */,
 				6B5AB0F02196E0E500581E78 /* AppDelegate.swift */,
 				6B5AB0F22196E0E500581E78 /* ViewController.swift */,
 				6B5AB0F42196E0E500581E78 /* Main.storyboard */,
 				6B5AB0F72196E0E700581E78 /* Assets.xcassets */,
 				6B5AB0F92196E0E700581E78 /* LaunchScreen.storyboard */,
-				6B5AB1022196E2F300581E78 /* CityProvider.swift */,
-				6B5AB1042196E3EB00581E78 /* CityService.swift */,
 			);
 			path = Internal;
 			sourceTree = "<group>";
@@ -229,11 +229,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B5AB1052196E3EB00581E78 /* CityService.swift in Sources */,
 				6B5AB1072196E93700581E78 /* CountryAutocomplete.swift in Sources */,
+				6BBC82A02198589B00F2E3F7 /* CountryService.swift in Sources */,
 				6B5AB0F32196E0E500581E78 /* ViewController.swift in Sources */,
+				6BBC829F2198589B00F2E3F7 /* CountrySearcher.swift in Sources */,
 				6B5AB0F12196E0E500581E78 /* AppDelegate.swift in Sources */,
-				6B5AB1032196E2F300581E78 /* CityProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
