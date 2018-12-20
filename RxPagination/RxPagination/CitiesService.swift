@@ -11,13 +11,13 @@ import RxSwift
 
 protocol CitiesService {
 
-    func getCities(page: Int) -> Single<[String]>
+    func getCities(lastId: String) -> Single<[City]>
     
 }
 
 class CitiesJsonService: CitiesService {
     
-    var cities: [String] = []
+    var cities: [City] = []
     
     init() {
         
@@ -25,7 +25,6 @@ class CitiesJsonService: CitiesService {
             if let jsonPath = Bundle.main.url(forResource: "CitiesJson", withExtension: "json"){
                 let jsonData = try Data(contentsOf: jsonPath)
                 self.cities = try JSONDecoder().decode([City].self, from: jsonData)
-                    .map { $0.name }
             }
         } catch let error {
             print(error)
@@ -33,7 +32,7 @@ class CitiesJsonService: CitiesService {
         
     }
     
-    func getCities(page: Int) -> Single<[String]> {
+    func getCities(lastId: String) -> Single<[City]> {
         return Single.just(self.cities)
     }
     
